@@ -1,0 +1,65 @@
+/* Page background and basic layout to center the card near the top */
+body {
+	background-color: rgb(177, 230, 177);
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	min-height: 100vh;
+	margin: 0;
+	padding-top: 40px;
+}
+
+/* Card container styling: white background, border, padding, rounded corners */
+main {
+	background-color: white;
+	border: 2px solid darkblue;
+	border-radius: 8px;
+	padding: 30px;
+	max-width: 500px;
+	text-align: center;
+}
+
+/* Main heading styling: large dark-blue name */
+header h1 {
+	font-size: 3em;
+	color: darkblue;
+	margin: 0 0 20px 0;
+}
+
+/* Subheading styling: role in orange */
+main h2 {
+	font-size: 1.6em;
+	text-align: center;
+	color: orange;
+}
+
+/* Paragraph styling: readable font size and line spacing */
+main p {
+    font-size: 1.0em;
+    line-height: 1.6em;
+    margin: 0 20px;
+    text-align: center;
+}
+
+/* Profile image sizing and spacing */
+.profile-img {
+	max-width: 100%;
+	width: 220px;
+	height: auto;
+	display: block;
+	margin: 0 auto 16px;
+	border-radius: 8px;
+}
+
+/* Remove default list bullets and reset spacing for the links list */
+main ul {
+	list-style: none;
+	padding: 0;
+	margin: 16px 0 0;
+}
+
+/* Add vertical spacing between list items */
+main ul li {
+	margin: 10px 0;
+}
