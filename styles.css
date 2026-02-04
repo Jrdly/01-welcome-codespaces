@@ -1,65 +1,232 @@
-/* Page background and basic layout to center the card near the top */
+
 body {
-	background-color: rgb(177, 230, 177);
-	font-family: Arial, sans-serif;
+	background: #f6f8fa;
+	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: #23272f;
+	letter-spacing: 0.01em;
+	line-height: 1.7;
+}
+/* Hero Section */
+.hero-section {
+	position: relative;
+	width: 100%;
+	min-height: 340px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #16213e;
+	overflow: hidden;
+}
+.hero-bg {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80'), linear-gradient(120deg, #16213e 80%, #1f2a48 100%);
+	background-size: cover;
+	background-position: center;
+	opacity: 0.45;
+	z-index: 1;
+}
+.hero-content {
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	color: #fff;
+	padding: 48px 24px 36px 24px;
+}
+.hero-profile-img {
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid #4f8cff;
+	margin-bottom: 18px;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.hero-name {
+	font-size: 2.1em;
+	font-weight: 700;
+	margin: 0 0 10px 0;
+	letter-spacing: 0.5px;
+}
+.hero-tagline {
+	font-size: 1.15em;
+	font-weight: 400;
+	margin: 0;
+	color: #e0e6f7;
+}
+
+/* Header */
+.site-header {
+	background: #fff;
+	color: #23272f;
+	border-bottom: 1.5px solid #e3e7ee;
+	padding: 0;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.header-content {
+	max-width: 950px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 32px;
+	height: 70px;
+}
+
+.site-header h1 {
+	margin: 0;
+	font-size: 2em;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	color: #2a4d8f;
+}
+
+nav a {
+	color: #2a4d8f;
+	text-decoration: none;
+	margin-left: 32px;
+	font-weight: 500;
+	font-size: 1.08em;
+	padding: 2px 0;
+	border-bottom: 2px solid transparent;
+	transition: border-color 0.2s, color 0.2s;
+	position: relative;
+}
+nav a:first-child {
+	margin-left: 0;
+}
+nav a:hover, nav a:focus {
+	color: #4f8cff;
+	border-bottom: 2px solid #4f8cff;
+	outline: none;
+}
+
+
+/* About Section */
+/* About Section */
+.about-section {
+	background: #fff;
+	width: 100%;
+	padding: 64px 0 48px 0;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
-	min-height: 100vh;
-	margin: 0;
-	padding-top: 40px;
 }
-
-/* Card container styling: white background, border, padding, rounded corners */
-main {
-	background-color: white;
-	border: 2px solid darkblue;
-	border-radius: 8px;
-	padding: 30px;
-	max-width: 500px;
+.about-text {
+	max-width: 700px;
+	margin: 0 24px;
 	text-align: center;
 }
 
-/* Main heading styling: large dark-blue name */
-header h1 {
-	font-size: 3em;
-	color: darkblue;
-	margin: 0 0 20px 0;
+@media (min-width: 700px) {
+	.about-section {
+		flex-direction: row;
+		align-items: center;
+		text-align: left;
+		gap: 48px;
+	}
+	.about-section .profile-img {
+		margin-right: 0;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	.about-section .about-text {
+		flex: 1;
+	}
 }
 
-/* Subheading styling: role in orange */
-main h2 {
-	font-size: 1.6em;
-	text-align: center;
-	color: orange;
-}
-
-/* Paragraph styling: readable font size and line spacing */
-main p {
-    font-size: 1.0em;
-    line-height: 1.6em;
-    margin: 0 20px;
-    text-align: center;
-}
-
-/* Profile image sizing and spacing */
 .profile-img {
-	max-width: 100%;
-	width: 220px;
-	height: auto;
-	display: block;
-	margin: 0 auto 16px;
-	border-radius: 8px;
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid #4f8cff;
+	margin-bottom: 18px;
+	margin-top: 0;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-/* Remove default list bullets and reset spacing for the links list */
-main ul {
-	list-style: none;
-	padding: 0;
-	margin: 16px 0 0;
+.about-text h2 {
+	margin-top: 0;
+	color: #2a4d8f;
+	font-size: 1.6em;
+	font-weight: 600;
+	margin-bottom: 18px;
 }
 
-/* Add vertical spacing between list items */
-main ul li {
-	margin: 10px 0;
+.about-text .bio {
+	color: #3a3d4d;
+	font-size: 1.13em;
+	margin-bottom: 0;
+	line-height: 1.7;
+}
+/* Skills Section */
+.skills-section {
+	background: #eaf0fb;
+	width: 100%;
+	padding: 56px 0 48px 0;
+	display: flex;
+	justify-content: center;
+}
+.skills-content {
+	max-width: 700px;
+	margin: 0 24px;
+	text-align: center;
+}
+.skills-content h2 {
+	color: #2a4d8f;
+	font-size: 1.5em;
+	font-weight: 600;
+	margin-bottom: 18px;
+}
+.skills-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+	justify-content: center;
+	margin-top: 18px;
+}
+.skill-pill {
+	display: inline-block;
+	background: #fff;
+	color: #2a4d8f;
+	border: 1.5px solid #4f8cff;
+	border-radius: 22px;
+	padding: 8px 22px;
+	font-size: 1em;
+	font-weight: 500;
+	box-shadow: 0 2px 8px rgba(79,140,255,0.07);
+	transition: background 0.2s, color 0.2s;
+	cursor: default;
+}
+.skill-pill:hover {
+	background: #4f8cff;
+	color: #fff;
+}
+
+.site-footer {
+	background: #fff;
+	color: #7a859c;
+	text-align: center;
+	padding: 18px 0 12px 0;
+	margin-top: auto;
+	font-size: 1em;
+	letter-spacing: 0.5px;
+	border-top: 1.5px solid #e3e7ee;
+	box-shadow: 0 -2px 8px rgba(0,0,0,0.01);
 }

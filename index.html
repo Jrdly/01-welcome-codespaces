@@ -1,39 +1,59 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Document metadata and responsive settings -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>DeAndre's Profile Card</title>
-	<meta name="description" content="Welcome page for the Codespaces workshop repository.">
-	<!-- Link to external stylesheet -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DeAndre's Personal Website</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<main>
-		<header>
-			<!-- Profile image shown above the name -->
-			<img src="img/DeAndre.jpg" alt="DeAndre" class="profile-img">
-			<!-- Main heading: user's name -->
-			<h1>DeAndre Riley Jr.</h1>
-		</header>
+	<header class="site-header">
+		<div class="header-content">
+			<h1>DeAndre's Website</h1>
+			<nav>
+				<a href="#">Home</a>
+				<a href="#about">About</a>
+				<a href="#projects">Projects</a>
+				<a href="#skills">Skills</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</div>
+	</header>
+	<!-- Hero Section -->
+	<section class="hero-section">
+		<div class="hero-bg"></div>
+		<div class="hero-content">
+			<img src="img/DeAndre.jpg" alt="DeAndre's Photo" class="hero-profile-img">
+			<h2 class="hero-name">DeAndre Riley Jr.</h2>
+			<p class="hero-tagline">Aspiring Developer & College Freshman passionate about technology and learning.</p>
+		</div>
+	</section>
 
-		<!-- Subheading showing role -->
-		<h2><strong>Role:</strong> Web Developer | Student</h2>
+	<!-- About Section -->
+	<section class="about-section" id="about">
+		<div class="about-text">
+			<h2>About Me</h2>
+			<p class="bio">Hi! I'm DeAndre, a college freshman learning web development. I love building things, solving problems, and exploring new tech. Welcome to my personal portfolio!</p>
+		</div>
+	</section>
 
-		<!-- Short bio paragraph -->
-		<p>Hello! I'm a student learning web development. Being a web developer is my goal for college so far.</p>
-
-		<!-- Section title for favorite links -->
-		<h3>My Favorite Websites</h3>
-
-		<!-- Unordered list of favorite websites (links) -->
-		<ul>
-			<li><a href="https://www.chess.com/">Chess.com</a></li>
-			<li><a href="https://my.flowsavvy.app/app">FlowSavvy</a></li>
-			<li><a href="https://minecraft.novaskin.me/">Nova Skin</a></li>
-			<li><a href="https://perchance.org/welcome">Perchance</a></li>
-		</ul>
-	</main>
+	<!-- Skills Section -->
+	<section class="skills-section" id="skills">
+		<div class="skills-content">
+			<h2>Skills</h2>
+			<div class="skills-list">
+				<span class="skill-pill">HTML</span>
+				<span class="skill-pill">CSS</span>
+				<span class="skill-pill">JavaScript</span>
+				<span class="skill-pill">Python</span>
+				<span class="skill-pill">Git</span>
+				<span class="skill-pill">VS Code</span>
+			</div>
+		</div>
+	</section>
+	<footer class="site-footer">
+		&copy; 2026 DeAndre. All rights reserved.
+	</footer>
 </body>
 </html>
